@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Filter from './components/Filter'
 import PersonForm from './components/PersonForm'
+import Persons from './components/Persons'
 
 const App = () => {
 
@@ -55,10 +56,7 @@ const App = () => {
         handleNewNumber={handleNewNumber}
       />
       <h2>Numbers</h2>
-        {persons
-        .filter(person => person.name.toLowerCase().includes(filterPerson))
-        .map(person => <div key={person.number}>{person.name}{person.number}</div>)
-        }
+      <Persons persons={persons} filterPerson={filterPerson}/>
     </div>
   )
 }
