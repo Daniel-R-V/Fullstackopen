@@ -1,7 +1,3 @@
-const Person = ({persons,filterPerson}) => {
-    return (
-        persons.filter(person => person.name.toLowerCase().includes(filterPerson))
-    )
-}
+const Person = ({name,number}) => <div key={name}>{name}{number}</div>
 
 export default Person;
